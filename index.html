@@ -1,0 +1,1113 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Exjuro Games | Gaming Account E-Commerce</title>
+
+<link rel="icon" href="logo.jpg" type="image/jpeg">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #202938;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    z-index: 1000;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #202938;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #536071;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2563eb;
+}
+
+.nav-button {
+    background: #2563eb;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* GENERAL */
+
+section {
+    padding: 100px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #202938;
+}
+
+.section-title p {
+    color: #788394;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    padding-top: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(120deg, #f8fbff, #eef5ff);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-label {
+    display: inline-block;
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.25;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero p {
+    color: #697586;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid #2563eb;
+    color: #2563eb;
+}
+
+.btn-outline:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.hero-image {
+    width: 45%;
+    min-height: 320px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 100px;
+    box-shadow: 0 20px 50px rgba(37,99,235,0.18);
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    color: #697586;
+    font-size: 15px;
+}
+
+/* CATEGORIES */
+
+.categories {
+    background: #f8fafc;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #edf0f5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    border-color: #2563eb;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.category-card i {
+    font-size: 35px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-size: 15px;
+}
+
+/* CATALOG */
+
+.catalog {
+    background: white;
+}
+
+.catalog-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 250px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    width: 100%;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #e2e8f0;
+    background: white;
+    padding: 9px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    border: 1px solid #edf0f5;
+    border-radius: 13px;
+    overflow: hidden;
+    background: white;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+}
+
+.product-image {
+    height: 190px;
+    background: #eaf1ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-placeholder {
+    font-size: 55px;
+    color: #2563eb;
+}
+
+.product-status {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #dcfce7;
+    color: #15803d;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.product-status.sold {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.product-body {
+    padding: 20px;
+}
+
+.product-category {
+    font-size: 11px;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.product-body h3 {
+    font-size: 17px;
+    margin: 7px 0 12px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #788394;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.product-info i {
+    color: #2563eb;
+    width: 17px;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #edf0f5;
+    padding-top: 15px;
+    gap: 10px;
+}
+
+.price {
+    color: #2563eb;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.buy-btn {
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 9px 14px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.buy-btn.disabled {
+    background: #cbd5e1;
+    pointer-events: none;
+}
+
+.empty-result {
+    display: none;
+    text-align: center;
+    color: #788394;
+    padding: 40px;
+    grid-column: 1 / -1;
+}
+
+/* HOW TO BUY */
+
+.how-to-buy {
+    background: #f8fafc;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #edf0f5;
+}
+
+.step-number {
+    background: #dbeafe;
+    color: #2563eb;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-weight: 700;
+}
+
+.step-card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    font-size: 12px;
+    color: #788394;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #172033;
+    color: white;
+    padding: 55px 8% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.footer h3 {
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: #aab4c5;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 23px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #60a5fa;
+}
+
+.copyright {
+    border-top: 1px solid #344056;
+    padding-top: 20px;
+    text-align: center;
+    color: #aab4c5;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 4%;
+    }
+
+    section {
+        padding: 85px 5%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .category-container,
+    .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: auto;
+        min-height: 65px;
+        padding: 12px 4%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-button {
+        padding: 7px 10px;
+    }
+
+    body {
+        padding-top: 95px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .category-container,
+    .steps-container,
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-tools {
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+    
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+    <a href="#home" class="logo">EXJURO<span> GAMES</span></a>
+
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#how-to-buy">How to Buy</a></li>
+        <li><a href="#contact" class="nav-button">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            <i class="fas fa-gamepad"></i>
+            GAMING ACCOUNT E-Commerce
+        </span>
+
+        <h1>
+            Find Your Next
+            <span>Gaming Account.</span>
+        </h1>
+
+        <p>
+            Welcome to Exjuro Games. Discover a variety of gaming
+            accounts with detailed information, transparent prices,
+            and an easy purchasing process.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#catalog" class="btn btn-primary">
+                Explore Accounts <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <a href="#about" class="btn btn-outline">
+                Learn More
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <i class="fas fa-gamepad"></i>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+        <h2>About Exjuro Games</h2>
+        <p>Get to know our marketplace</p>
+    </div>
+
+    <div class="about-content">
+        <p>
+            Exjuro Games is a gaming account marketplace that provides
+            various gaming account options for players.
+            We aim to make it easier for customers to discover
+            accounts through detailed product information,
+            transparent pricing, and direct communication
+            with our admin.
+        </p>
+    </div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="categories" id="categories">
+
+    <div class="section-title">
+        <h2>Game Categories</h2>
+        <p>Explore accounts from your favorite games</p>
+    </div>
+
+    <div class="category-container">
+    <div class="category-card" data-filter="Mobile Legends">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Mobile Legends</h3>
+    </div>
+    <div class="category-card" data-filter="Free Fire">
+        <i class="fas fa-fire"></i>
+        <h3>Free Fire</h3>
+    </div>
+
+        <!-- <div class="category-card" data-filter="Genshin Impact">
+            <i class="fas fa-star"></i>
+            <h3>Genshin Impact</h3>
+        </div>
+
+        <div class="category-card" data-filter="PUBG Mobile">
+            <i class="fas fa-crosshairs"></i>
+            <h3>PUBG Mobile</h3>
+        </div> -->
+
+    </div>
+
+</section>
+
+<!-- CATALOG -->
+
+<section class="catalog" id="catalog">
+
+    <div class="section-title">
+        <h2>Available Accounts</h2>
+        <p>Find the account that matches your preferences</p>
+    </div>
+
+    <div class="catalog-tools">
+
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput"
+            placeholder="Search gaming accounts...">
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="Mobile Legends">
+                Mobile Legends
+            </button>
+
+            <button class="filter-btn" data-filter="Free Fire">
+                Free Fire
+            </button>
+
+            <!-- <button class="filter-btn" data-filter="Genshin Impact">
+                Genshin Impact
+            </button>
+
+            <button class="filter-btn" data-filter="PUBG Mobile">
+                PUBG Mobile
+            </button> -->
+        </div>
+
+    </div>
+
+    <div class="product-container" id="productContainer">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card" data-category="Mobile Legends">
+
+            <div class="product-image">
+                <img src="ml-account.jpg"
+                alt="Mobile Legends Account"
+                onerror="this.style.display='none';">
+                <span class="product-status">Available</span>
+            </div>
+
+            <div class="product-body">
+
+                <span class="product-category">Mobile Legends</span>
+
+                <h3>ML Account #001</h3>
+
+                <div class="product-info">
+                    <span><i class="fas fa-trophy"></i> Highest Rank: Mythical Glory</span>
+                    <span><i class="fas fa-user"></i> Hero: Complete</span>
+                    <span><i class="fas fa-star"></i> Skin: 226</span>
+                </div>
+
+                <div class="product-bottom">
+                    <span class="price">Rp100.000</span>
+
+                    <a class="buy-btn"
+                    href="https://wa.me/6285103591299?text=Halo%20Exjuro%20Games,%20saya%20tertarik%20dengan%20ML%20Account%20%23001."
+                    target="_blank">
+                        Contact Admin
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card" data-category="Free Fire">
+
+            <div class="product-image">
+                <img src="ff-account.jpg"
+                alt="Free Fire Account"
+                onerror="this.style.display='none';">
+                <span class="product-status">Available</span>
+            </div>
+
+            <div class="product-body">
+
+                <span class="product-category">Free Fire</span>
+
+                <h3>FF Account #001</h3>
+
+                <div class="product-info">
+                    <span><i class="fas fa-trophy"></i> Rank: Heroic</span>
+                    <span><i class="fas fa-gun"></i> Shotgun: 3</span>
+                    <span><i class="fas fa-shirt"></i> Vault: 400</span>
+                </div>
+
+                <div class="product-bottom">
+                    <span class="price">Rp250.000</span>
+
+                    <a class="buy-btn"
+                    href="https://wa.me/6285103591299?text=Halo%20Exjuro%20Games,%20saya%20tertarik%20dengan%20FF%20Account%20%23001."
+                    target="_blank">
+                        Contact Admin
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+
+        <!-- <div class="product-card" data-category="Genshin Impact">
+
+            <div class="product-image">
+                <img src="assets/genshin-account.jpg"
+                alt="Genshin Impact Account"
+                onerror="this.style.display='none';">
+                <span class="product-status">Available</span>
+            </div>
+
+            <div class="product-body">
+
+                <span class="product-category">Genshin Impact</span>
+
+                <h3>GI Account #001</h3>
+
+                <div class="product-info">
+                    <span><i class="fas fa-globe"></i> Server: Asia</span>
+                    <span><i class="fas fa-user"></i> Characters: 15</span>
+                    <span><i class="fas fa-star"></i> 5-Star: 8</span>
+                </div>
+
+                <div class="product-bottom">
+                    <span class="price">Rp500.000</span>
+
+                    <a class="buy-btn"
+                    href="https://wa.me/6285103591299?text=Halo%20Exjuro%20Games,%20saya%20tertarik%20dengan%20GI%20Account%20%23001."
+                    target="_blank">
+                        Contact Admin
+                    </a>
+                </div>
+
+            </div>
+        </div> -->
+
+    </div>
+
+    <div class="empty-result" id="emptyResult">
+        <i class="fas fa-search"></i>
+        <p>No accounts found.</p>
+    </div>
+
+</section>
+
+<!-- HOW TO BUY -->
+
+<section class="how-to-buy" id="how-to-buy">
+
+    <div class="section-title">
+        <h2>How to Buy</h2>
+        <p>Simple steps to purchase your gaming account</p>
+    </div>
+
+    <div class="steps-container">
+
+        <div class="step-card">
+            <div class="step-number">01</div>
+            <h3>Choose Account</h3>
+            <p>Browse our catalog and select your preferred account.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">02</div>
+            <h3>Contact Admin</h3>
+            <p>Contact our admin to check the account details and availability.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">03</div>
+            <h3>Confirm Transaction</h3>
+            <p>Discuss the payment and transaction process with the admin.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">04</div>
+            <h3>Receive Account</h3>
+            <p>Follow the agreed account handover and security procedures.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer" id="contact">
+
+    <div class="footer-content">
+
+        <div>
+            <h3>EXJURO GAMES</h3>
+            <p>Your Gateway to the Gaming World.</p>
+            <p>Gaming Account Marketplace.</p>
+        </div>
+
+        <div>
+            <h3>Contact Us</h3>
+
+            <div class="footer-links">
+
+                <a href="https://www.instagram.com/exjuro_games/"
+                target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/6285103591299"
+                target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="mailto:fanhyo33@gmail.com"
+                aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        &copy; 2026 Exjuro Games. All rights reserved.
+    </div>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// CATEGORY FILTER AND SEARCH
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const categoryCards = document.querySelectorAll('.category-card');
+const products = document.querySelectorAll('.product-card');
+const searchInput = document.getElementById('searchInput');
+const emptyResult = document.getElementById('emptyResult');
+
+let activeFilter = 'all';
+
+function filterProducts() {
+
+    const keyword = searchInput.value.toLowerCase();
+    let visibleCount = 0;
+
+    products.forEach(product => {
+
+        const category = product.dataset.category;
+        const content = product.innerText.toLowerCase();
+
+        const matchesCategory =
+            activeFilter === 'all' || category === activeFilter;
+
+        const matchesSearch = content.includes(keyword);
+
+        if (matchesCategory && matchesSearch) {
+            product.style.display = 'block';
+            visibleCount++;
+        } else {
+            product.style.display = 'none';
+        }
+
+    });
+
+    emptyResult.style.display =
+        visibleCount === 0 ? 'block' : 'none';
+}
+
+// FILTER BUTTONS
+
+filterButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        filterButtons.forEach(btn =>
+            btn.classList.remove('active')
+        );
+
+        button.classList.add('active');
+
+        activeFilter = button.dataset.filter;
+
+        filterProducts();
+
+    });
+
+});
+
+// CATEGORY CARD CLICK
+
+categoryCards.forEach(card => {
+
+    card.addEventListener('click', () => {
+
+        activeFilter = card.dataset.filter;
+
+        filterButtons.forEach(btn => {
+            btn.classList.toggle(
+                'active',
+                btn.dataset.filter === activeFilter
+            );
+        });
+
+        searchInput.value = '';
+
+        filterProducts();
+
+        document.getElementById('catalog').scrollIntoView({
+            behavior: 'smooth'
+        });
+
+    });
+
+});
+
+// SEARCH
+
+searchInput.addEventListener('input', filterProducts);
+
+// NAVBAR ACTIVE STATE
+
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+
+    let current = '';
+
+    document.querySelectorAll('section').forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove('active');
+
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
